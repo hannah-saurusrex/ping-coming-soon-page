@@ -75,7 +75,7 @@ input.error::placeholder {
     color: hsl(354, 100%, 66%);
 }
 
-button {
+.btn {
     background-color: hsl(223, 87%, 63%);
     border: none;
     border-radius: 50px;
@@ -91,7 +91,7 @@ button {
     flex: 0.3;
 }
 
-button:hover {
+.btn:hover {
     opacity: 0.8;
 }
 
@@ -145,7 +145,7 @@ footer p {
         width: 100%;
     }
 
-    button {
+    .btn {
         margin-left: 0;
         width: 100%;
     }
