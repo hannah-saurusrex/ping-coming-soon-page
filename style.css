@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap');
+:root {
+    /* primary */
+    --blue: hsl(223, 87%, 63%);
+    /* secondary */
+    --paleBlue: hsl(223, 100%, 88%);
+    --lightRed: hsl(354, 100%, 66%);
+    /* neutral */
+    --gray: hsl(0, 0%, 59%);
+    --darkBlue: hsl(209, 33%, 12%);
+}
 
 * {
     box-sizing: border-box;
@@ -15,33 +25,33 @@ main {
     text-align: center;
 }
 
-h1 {
-    color: hsl(0, 0%, 59%);
+.header {
+    color: var(--gray);
     font-weight: 300;
     font-size: 50px;
     margin-bottom: 10px;
 }
 
-h1 span {
+.header span {
     font-weight: 700;
-    color: hsl(209, 33%, 12%);
+    color: var(--darkBlue);
 }
 
-h2 {
+.subheader {
     font-weight: 300;
-    color: hsl(0, 0%, 59%);
+    color: var(--gray);
 }
 
-form {
+.form {
     display: flex;
     align-items: flex-start;
     margin-top: 50px;
     text-align: left;
 }
 
-form small {
+.form small {
     display: none;
-    color: hsl(354, 100%, 66%);
+    color: var(--lightRed);
     font-style: italic;
     font-size: 12px;
     z-index: 100;
@@ -52,8 +62,8 @@ form small {
     flex: 0.7;
 }
 
-input {
-    border: 1px solid hsl(223, 100%, 88%);
+.input {
+    border: 1px solid var(--paleBlue);
     border-radius: 50px;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 16px;
@@ -63,23 +73,23 @@ input {
     outline: none;
 }
 
-input::placeholder {
-    color: hsl(223, 100%, 88%);
+.input::placeholder {
+    color: var(--paleBlue);
 }
 
-input.error {
-    border-color: hsl(354, 100%, 66%);
+.input.error {
+    border-color: var(--lightRed);
 }
 
-input.error::placeholder {
-    color: hsl(354, 100%, 66%);
+.input.error::placeholder {
+    color: var(--lightRed);
 }
 
 .btn {
-    background-color: hsl(223, 87%, 63%);
+    background-color: var(--blue);
     border: none;
     border-radius: 50px;
-    box-shadow: 0 5px 5px hsl(223, 100%, 88%);
+    box-shadow: 0 5px 5px var(--paleBlue);
     color: #fff;
     cursor: pointer;
     outline: none;
@@ -114,7 +124,7 @@ input.error::placeholder {
 
 .social-list li a {
     border: 1px solid hsl(0, 7%, 89%);
-    color: hsl(223, 87%, 63%);
+    color: var(--blue);
     font-size: 18px;
     border-radius: 50%;
     height: 40px;
@@ -126,17 +136,17 @@ input.error::placeholder {
 }
 
 .social-list li a:hover {
-    background-color: hsl(223, 87%, 63%);
-    border-color: hsl(223, 87%, 63%);
+    background-color: var(--blue);
+    border-color: var(--blue);
     color: #fff;
 }
 
-footer p {
-    color: hsl(0, 0%, 59%);
+.footer-copy {
+    color: var(--gray);
 }
 
 @media screen and (max-width: 650px) {
-    form {
+    .form {
         flex-direction: column;
         text-align: center;
     }
